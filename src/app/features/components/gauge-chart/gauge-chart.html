@@ -1,0 +1,11 @@
+<div class="gauge-container">
+  <canvas baseChart [data]="doughnutChartData" [options]="doughnutChartOptions" [type]="'doughnut'">
+  </canvas>
+  <div class="needle-container d-flex justify-content-between align-items-end mx-2">
+    <div>{{ minValue }}</div>
+    <div class="gauge-semicircle">
+      <div class="needle" [style.transform]="'rotate(' + (percentage * 180 - 90) + 'deg)'"></div>
+    </div>
+    <div>{{ maxValue }}</div>
+  </div>
+</div>

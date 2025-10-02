@@ -1,0 +1,104 @@
+<div>
+  <div class="rounded-3">
+    <div class="p-4">
+      <h5 class="fw-bold mb-1 text-primary">
+        NB SCORE HISTORY
+        <span class="ms-2 text-info" style="cursor: pointer" title="Your score history data.">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-info-circle"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            <path d="m8.93 6.514-.94.314V7.5h.94z" />
+            <path
+              d="M8 4a.905.905 0 0 0-.9.995l.381 2.822.084.77h1.077l.084-.77.381-2.822A.905.905 0 0 0 8 4"
+            />
+          </svg>
+        </span>
+      </h5>
+      <div class="main-bg p-5 mt-3">
+        <p class="text-muted small mb-4">
+          Trended view of the changes in your NB Score with every refresh.
+        </p>
+
+        <div class="row">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <div class="chart-container rounded p-2">
+              <canvas id="scoreChart"></canvas>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card rounded-3 shadow-sm border">
+              <div class="card-header bg-light fw-bold py-2">
+                {{ activeMonthLabel() }}
+              </div>
+              <div class="card-body p-0">
+                <div class="list-group list-group-flush score-log-height">
+                  @for (update of scoreHistory(); track update.date) {
+                  <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="d-flex align-items-center">
+                      <span class="me-2" [ngClass]="getTrendClass(update.trend)">
+                        @if (update.trend === 'up') {
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-up-right-square-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v3.525c0 .138.112.25.25.25h1.125a.25.25 0 0 0 .25-.25V5.513a.25.25 0 0 0-.25-.25h-4.375a.25.25 0 0 0-.25.25v1.125c0 .138.112.25.25.25h3.525l-4.096 4.096a.25.25 0 0 0 0 .354l.793.793a.25.25 0 0 0 .354 0"
+                          />
+                        </svg>
+                        } @else if (update.trend === 'down') {
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-down-right-square-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 5.197 10 9.293V5.768a.25.25 0 0 1 .25-.25h1.125a.25.25 0 0 1 .25.25v4.375a.25.25 0 0 1-.25.25H7.076a.25.25 0 0 1-.25-.25V9.707l4.096-4.096a.25.25 0 0 1 0-.354l-.793-.793a.25.25 0 0 1-.354 0"
+                          />
+                        </svg>
+                        } @else if (update.trend === 'new') {
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-right-square-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM6.5 4.5a.5.5 0 0 0 0 1H9.793l-1.35 1.35a.5.5 0 0 0 .707.707l2.25-2.25a.5.5 0 0 0 0-.707l-2.25-2.25a.5.5 0 0 0-.707.707L9.793 4.5z"
+                          />
+                        </svg>
+                        }
+                      </span>
+                      <span [ngClass]="getTrendTextClass(update.trend)">
+                        @if (update.trend === 'up') { +{{ update.change }} } @else if (update.trend
+                        === 'down') { -{{ update.change }}
+                        } @else if (update.trend === 'new') { N/H }
+                      </span>
+                    </span>
+                    <span class="fw-bold">{{ update.score }}</span>
+                    <span class="text-muted small">{{ update.date }}</span>
+                  </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

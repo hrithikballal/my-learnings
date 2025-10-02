@@ -1,0 +1,15 @@
+{
+"user": { "name": "Rahul L.", "score": 767, "rankRange": "Top 10%" },
+"accounts": [
+{ "title": "Total accounts", "value": 6 },
+{ "title": "Closed credit cards", "value": 1 }
+],
+"summary": {
+"totalDisputes": 12,
+"totalEnquiries": 5
+},
+"scoreHistory": {
+"labels": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"],
+"values": [710,720,730,735,740,750,760,767]
+}
+}

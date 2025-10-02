@@ -1,0 +1,40 @@
+<nav class="sidebar text-white">
+  <div class="brand mb-4 p-3">NETBRAMHA</div>
+  <mat-accordion>
+    <mat-expansion-panel
+      class="monitor-side-bar-panel"
+      [ngClass]="{ 'menu-expaned': panel.expanded }"
+      #panel
+    >
+      <mat-expansion-panel-header class="monitor-side-bar-expansion-outer bg-sucess px-3">
+        <mat-panel-title class="monitor-side-bar-heading">
+          <img class="img me-3" src="assets/images/home-icon.png" alt="" /> Overview
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="ps-3 mat-submenu">
+        <p class="my-3">Score And Report</p>
+        <p class="my-3">Summary</p>
+        <p class="my-3">History</p>
+        <p class="my-3">Where You Stand</p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/report-icon.png" alt="" />Your Report
+  </div>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/alert-icon.png" alt="" />Alerts
+  </div>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/stimulator-icon.png" alt="" />Simultor
+  </div>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/education-icon.png" alt="" />Education
+  </div>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/upgrade-icon.png" alt="" />Upgrade My Plan
+  </div>
+  <div class="mb-2 p-3">
+    <img class="img me-3" src="assets/images/reward-icon.png" alt="" />Reward Program
+  </div>
+</nav>

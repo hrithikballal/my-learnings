@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-end align-items-center p-3 top-bar">
+  <div class="d-flex gap-4">
+    <div class="d-flex align-items-center">
+      <img class="img" src="assets/images/help-icon.png" alt="" />
+      <span class="fs-14 ms-1 text-nowrap">How It works</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <img class="img" src="assets/images/language-icon.png" alt="" />
+      <span class="fs-14 ms-1 text-nowrap">{{ selectedLanguage }}</span>
+      <button class="dropdown-icon" mat-button [matMenuTriggerFor]="langMenu">
+        <span class="mdi mdi-chevron-down"></span>
+      </button>
+      <mat-menu #langMenu="matMenu" xPosition="before">
+        @for(lang of languages; track lang){
+        <button mat-menu-item (click)="selectLanguage(lang)">{{ lang }}</button>
+        }
+      </mat-menu>
+    </div>
+    <div class="d-flex align-items-center">
+      <img class="img" src="assets/images/account-icon.png" alt="" />
+      <span class="fs-14 ms-1 text-nowrap">My Account</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <img class="img" src="assets/images/logout-icon.png" alt="" />
+      <span class="fs-14 ms-1 text-nowrap">Logout</span>
+    </div>
+  </div>
+</div>

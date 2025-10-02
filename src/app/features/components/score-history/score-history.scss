@@ -1,0 +1,36 @@
+.score-log-height {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.chart-container {
+  min-height: 400px; /* Ensure chart area is visible */
+}
+canvas {
+  max-width: 100%;
+  height: 350px !important;
+}
+/* Custom style to override Chart.js default line color on hover */
+.up-arrow {
+  color: #28a745; /* Green */
+}
+.down-arrow {
+  color: #dc3545; /* Red */
+}
+.new-arrow {
+  color: #0d6efd; /* Blue */
+}
+.score-up {
+  color: #28a745;
+}
+.score-down {
+  color: #dc3545;
+}
+.score-new {
+  color: #6c757d;
+}
+.card {
+  border: none;
+}
+.main-bg {
+  background-color: #f8f9fa;
+}

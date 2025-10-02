@@ -1,0 +1,99 @@
+<div class="d-flex">
+  <app-sidebar></app-sidebar>
+  <div class="flex-fill p-4 main-content">
+    <app-topbar title="Your Report"></app-topbar>
+
+    <div class="container-fluid mt-4">
+      <div class="row g-5" *ngIf="ds.data$ | async as data">
+        <div class="col-md-6">
+          <div class="card text-center pb-4 pt-5">
+            <h1>Hello, {{ data.user.name }}</h1>
+            <div>
+              <app-gauge-chart></app-gauge-chart>
+            </div>
+            <h1 class="mt-2">{{ data.user.score }}</h1>
+            <p class="fs-18">
+              is your <span style="color: #00a6ca">NB </span>Score as of 19th Apr ‘22
+            </p>
+            <div class="d-flex card-footer w-100 py-3">
+              <div class="w-100 align-content-center">
+                <a href="#" class="text-link d-flex align-items-center">
+                  <span class="fw-medium">Score Analysis</span>
+                </a>
+              </div>
+              <div class="w-100 align-content-center">
+                <button class="refresh-btn rounded-pill px-5 py-2">Refresh now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card shadow-sm p-5 mb-4 nb-report-card border-0">
+            <div class="row g-0 align-items-center">
+              <div class="col-10">
+                <h4 class="fw-bold mb-2 report-title">NB REPORT</h4>
+                <p class="text-secondary mb-3">
+                  Get your personalized NB Report to plan your financial future.
+                </p>
+
+                <div class="d-flex flex-column">
+                  <div class="d-flex align-items-center mb-2">
+                    <img src="assets/images/view-icon.png" alt="Report Icon" class="me-2" />
+                    <a href="#" class="text-link d-flex align-items-center">
+                      <span class="fw-medium">View Your NB Report</span>
+
+                      <span class="mdi mdi-chevron-right fs-24"></span>
+                    </a>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <img src="assets/images/download-icon.png" alt="Report Icon" class="me-2" />
+                    <a href="#" class="text-link d-flex align-items-center">
+                      <span class="fw-medium">Download Your NB Report With Summary</span>
+
+                      <span class="mdi mdi-chevron-right fs-24"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-2 d-flex justify-content-end">
+                <img
+                  src="assets/images/dash-1.png"
+                  alt="NB Report Icon"
+                  class="report-icon img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="yellow-highlight d-flex align-items-center row p-5">
+            <div class="col-8">
+              <p class="mb-0 fs-16">
+                You currently have an active subscription. You will be able to access Free Annual NB
+                Score & Report after the subscription period expires.
+              </p>
+            </div>
+            <div class="col-4">
+              <img
+                src="assets/images/dash-2.svg"
+                alt="Calendar Icon"
+                class="report-icon img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <app-score-history></app-score-history>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-4">
+      <app-accounts-summary></app-accounts-summary>
+    </div>
+    <!-- <div class="container-fluid mt-4">
+      <app-score-range></app-score-range>
+    </div> -->
+  </div>
+</div>

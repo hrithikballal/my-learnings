@@ -1,0 +1,58 @@
+.needle {
+  position: relative;
+  left: 50%;
+  bottom: 120px;
+  width: 3px;
+  height: 120px; /* adjust so it sits inside gauge */
+  background: black;
+  transform-origin: bottom center;
+  transition: transform 0.5s ease-in-out;
+}
+.gauge-value {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.gauge-container {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.needle-container {
+  position: relative;
+  bottom: 150px;
+  margin: 50px auto;
+  overflow: hidden;
+  height: 120px;
+}
+
+.gauge-semicircle {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  margin-bottom: 20px;
+}
+
+.needle {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 3px;
+  height: 120px;
+  background: black;
+  transform-origin: bottom center;
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
+  margin-left: -1.5px;
+  z-index: 10;
+}

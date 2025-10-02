@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="col-md-7">
+    <div class="card p-3">
+      <div class="d-flex align-items-center mb-3">
+        <h5 class="card-title mb-0 text-link fs-16">Your Accounts</h5>
+        <span
+          class="ms-2 text-muted"
+          data-bs-toggle="tooltip"
+          title="Information about your accounts"
+        >
+          <i class="bi bi-info-circle"></i>
+        </span>
+        <div class="btn-group ms-auto tab-section" role="group">
+          <button type="button" class="tab-button-active rounded-3 px-3 me-2">All</button>
+          <button type="button" class="tab-button rounded-3 px-3 me-2">Open</button>
+          <button type="button" class="tab-button rounded-3 px-3">Closed</button>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-6 position-relative d-flex justify-content-center">
+          <div class="graph-container">
+            <canvas
+              baseChart
+              [data]="doughnutChartData"
+              [options]="doughnutChartOptions"
+              [type]="'doughnut'"
+            >
+            </canvas>
+          </div>
+
+          <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <div class="fs-14">Total</div>
+            <div class="fs-14">Accounts</div>
+            <div class="fs-14">{{ totalAccounts }}</div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <ul class="list-unstyled">
+            <li *ngFor="let account of accounts" class="d-flex align-items-center mb-4">
+              <span class="me-2 chart-legend" [style.background]="account.color"></span>
+              <span class="flex-grow-1 fw-bold">{{ account.label }}</span>
+              <span class="fw-bold">{{ account.count }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <div class="card">
+      <div class="d-flex">
+        <div class="p-3 icon-box d-flex justify-content-center align-items-start mb-3">
+          <img src="assets/images/enquiries-icon.png" alt="Report Icon" />
+        </div>
+
+        <div class="p-3 w-100 d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <div>
+              <h6 class="mb-0 fw-bold fs-16 mb-2 text-link">Total Disputes</h6>
+              <p class="mb-1 fs-14">Learn more about credit reporting and related policies.</p>
+              <a href="#" class="fs-14 text-link">Read More</a>
+            </div>
+          </div>
+          <span class="fs-4 fw-bolder">{{ totalDisputes }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="d-flex">
+        <div class="p-3 icon-box d-flex justify-content-center align-items-start mb-3">
+          <img src="assets/images/dispute-icon.png" alt="Report Icon" />
+        </div>
+        <div class="p-3 w-100 d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <div>
+              <h6 class="mb-0 fw-bold fs-16 mb-2 text-link">Total Enquiries</h6>
+              <p class="mb-0 fs-14 text-muted">(In last 3 years)</p>
+            </div>
+          </div>
+          <span class="fs-4 fw-bolder">{{ totalEnquiries }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

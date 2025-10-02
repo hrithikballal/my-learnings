@@ -1,0 +1,28 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background-color: #008a00;
+  position: fixed;
+}
+.monitor-side-bar-panel {
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  .monitor-side-bar-heading {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.mat-submenu {
+  color: white;
+  font-size: 14px;
+  border-left: 2px solid #ffffff1c;
+}
+.menu-expaned {
+  background: #007500;
+}
+.img {
+  height: 24px;
+}
