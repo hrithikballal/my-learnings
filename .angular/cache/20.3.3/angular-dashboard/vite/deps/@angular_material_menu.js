@@ -4,24 +4,26 @@ import {
   ScrollingModule,
   ViewportRuler,
   supportsScrollBehavior
-} from "./chunk-FKGSHMOK.js";
+} from "./chunk-BLU6WX2H.js";
+import {
+  DomPortalOutlet,
+  PortalModule,
+  TemplatePortal,
+  _StructuralStylesLoader
+} from "./chunk-CN4EBHMZ.js";
 import {
   DOWN_ARROW,
-  DomPortalOutlet,
   ENTER,
   ESCAPE,
   FocusKeyManager,
   FocusMonitor,
   LEFT_ARROW,
   MatCommonModule,
-  PortalModule,
   RIGHT_ARROW,
   SPACE,
-  TemplatePortal,
   UP_ARROW,
   _CdkPrivateStyleLoader,
   _IdGenerator,
-  _StructuralStylesLoader,
   _animationsDisabled,
   _getEventTarget,
   _getShadowRoot,
@@ -30,11 +32,12 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-SUSLLO6U.js";
+} from "./chunk-GAX74FAS.js";
+import "./chunk-LOYRRYGS.js";
 import {
   Platform,
   coerceElement
-} from "./chunk-FQQ4NHNK.js";
+} from "./chunk-Z55GRBNN.js";
 import {
   BidiModule,
   Directionality

@@ -1,12 +1,14 @@
 import {
   ArrayDataSource,
-  Platform,
   _RecycleViewRepeaterStrategy,
   _VIEW_REPEATER_STRATEGY,
-  coerceElement,
-  coerceNumberProperty,
   isDataSource
-} from "./chunk-FQQ4NHNK.js";
+} from "./chunk-LOYRRYGS.js";
+import {
+  Platform,
+  coerceElement,
+  coerceNumberProperty
+} from "./chunk-Z55GRBNN.js";
 import {
   BidiModule,
   Directionality
@@ -1639,4 +1641,4 @@ export {
   CdkScrollableModule,
   ScrollingModule
 };
-//# sourceMappingURL=chunk-FKGSHMOK.js.map
+//# sourceMappingURL=chunk-BLU6WX2H.js.map
