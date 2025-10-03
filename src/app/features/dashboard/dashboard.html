@@ -1,21 +1,21 @@
 <div class="d-flex">
   <app-sidebar></app-sidebar>
-  <div class="flex-fill p-4 main-content">
+  <div class="flex-fill main-content">
     <app-topbar title="Your Report"></app-topbar>
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 p-4">
       <div class="row g-5" *ngIf="ds.data$ | async as data">
         <div class="col-md-6">
-          <div class="card text-center pb-4 pt-5">
-            <h1>Hello, {{ data.user.name }}</h1>
+          <div class="card text-center pt-5">
+            <h1 class="fs-24">Hello, {{ data.user.name }}</h1>
             <div>
               <app-gauge-chart></app-gauge-chart>
             </div>
-            <h1 class="mt-2">{{ data.user.score }}</h1>
-            <p class="fs-18">
+            <h1 class="mt-2 mb-2">{{ data.user.score }}</h1>
+            <p class="fs-18 mb-4">
               is your <span style="color: #00a6ca">NB </span>Score as of 19th Apr ‘22
             </p>
-            <div class="d-flex card-footer w-100 py-3">
+            <div class="d-flex card-footer w-100 py-3 pb-4">
               <div class="w-100 align-content-center">
                 <a href="#" class="text-link d-flex align-items-center">
                   <span class="fw-medium">Score Analysis</span>
@@ -84,16 +84,16 @@
           </div>
         </div>
 
+        <div class="container-fluid mt-4">
+          <app-accounts-summary></app-accounts-summary>
+        </div>
         <div class="col-12">
           <app-score-history></app-score-history>
         </div>
       </div>
     </div>
     <div class="container-fluid mt-4">
-      <app-accounts-summary></app-accounts-summary>
-    </div>
-    <!-- <div class="container-fluid mt-4">
       <app-score-range></app-score-range>
-    </div> -->
+    </div>
   </div>
 </div>

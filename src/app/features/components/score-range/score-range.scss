@@ -1,0 +1,36 @@
+.score-indicator {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid black;
+  z-index: 10;
+  position: relative;
+  bottom: 7px;
+}
+
+.segment-1 {
+  background-color: #ef632c;
+}
+.segment-2 {
+  background-color: #e2931d;
+}
+.segment-3 {
+  background-color: #f8d74c;
+}
+.segment-4 {
+  background-color: #92bf4a;
+}
+.segment-5 {
+  background-color: #2f9c4a;
+}
+.graph-list {
+  height: 60px;
+}
+.legend-box {
+  height: 14px;
+  width: 14px;
+}
+.main-bg {
+  background-color: #f8f9fa;
+}

@@ -6,6 +6,7 @@ import { ScoreHistoryComponent } from '../components/score-history/score-history
 import { DataService } from '../../services/data.service';
 import { GaugeChartComponent } from '../components/gauge-chart/gauge-chart';
 import { AccountsSummaryComponent } from '../components/accounts-summary/accounts-summary';
+import { ScoreRange } from '../components/score-range/score-range';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +17,7 @@ import { AccountsSummaryComponent } from '../components/accounts-summary/account
     ScoreHistoryComponent,
     GaugeChartComponent,
     AccountsSummaryComponent,
+    ScoreRange,
   ],
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.scss'],
